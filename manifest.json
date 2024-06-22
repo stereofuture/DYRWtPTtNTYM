@@ -1,0 +1,14 @@
+{
+    "name": "Do You Really Want to Pack That the Next Time You Move?",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "Shopping extension that will save you hundreds to thousands of dollars every year",
+    "icons": {
+        "16": "icons/whybuy16x16.png",
+        "48": "icons/whybuy48x48.png",
+        "128": "icons/whybuy128x128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html"
+    }
+}
