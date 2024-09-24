@@ -8,7 +8,25 @@
         "48": "icons/whybuy48x48.png",
         "128": "icons/whybuy128x128.png"
     },
-    "action": {
-        "default_popup": "popup/popup.html"
-    }
+    "permissions": ["activeTab", "tabs"],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["lib/browser-polyfill.js", "content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["lib/browser-polyfill.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+    // "browser_specific_settings": {
+    //     "gecko": {
+    //       "id": "your-extension-id@example.com"
+    //     }
+    //   }
 }
